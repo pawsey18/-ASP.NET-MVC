@@ -25,16 +25,16 @@ namespace FlexMovies.Controllers
             var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
-                Customers = customers
+               Customers = customers
             };
-            return View(viewModel);
+            return  View(viewModel);
 
             //return Content("Hellooooo");
             //return HttpNotFound();
             //return new EmptyResult();
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name"});
 
-            //ViewBag.Movie = movie;
+       
 
         }
         // Action Parameters will use "id" as a default with the MapRoute in the RouteConfig.
@@ -60,6 +60,13 @@ namespace FlexMovies.Controllers
         public ActionResult ByReleaseDate(int year, byte month)
         {
             return Content(year + "/" + month);
+
+        }
+
+        [Route("movies/getit/{year}")]
+        public ActionResult JustGetIt(int year)
+        {
+            return Content(year.ToString());
 
         }
     }

@@ -1,0 +1,22 @@
+﻿@model FlexMovies.Models.Customer
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body>
+
+    <p>@Model.Name</p>
+
+    <div>
+        @foreach(var customer in Model.Customers)
+            {
+                <a style="cursor: pointer"><p>@customer.Name</p></a>
+            }
+    </div>
+     
+           
+    
+</body>
