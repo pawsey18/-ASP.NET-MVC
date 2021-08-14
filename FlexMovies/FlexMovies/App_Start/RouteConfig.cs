@@ -13,9 +13,7 @@ namespace FlexMovies
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapMvcAttributeRoutes();
-
-           
+           // routes.MapMvcAttributeRoutes();
 
 
             routes.MapRoute(

@@ -5,15 +5,11 @@ using System.Web;
 
 namespace FlexMovies.Models
 {
-    public class Customer
+    public class Category
     {
-        public int Id { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; }
 
-        public List<Customer> Customers { get; set; }
-
-
-
-
+        public virtual ICollection<Movie> Movies { get; set; }
     }
 }
