@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BSDemo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,22 @@ namespace BSDemo.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Basic()
+        {
+         
+            return View();
+        }
+
+        public ActionResult Advanced()
+        {
+            var person = new Person
+            {
+                FirstName = "donn",
+                LastName = "trump"
+            };
+            return View(person);
         }
     }
 }
